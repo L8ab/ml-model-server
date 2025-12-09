@@ -1,22 +1,49 @@
-# 🧠 ML Model Server
+# ML Model Server
 
-Production-ready machine learning model serving platform.
+A machine learning model serving platform with TensorFlow.
 
 ## Features
-- Model versioning and management
-- A/B testing framework
-- Real-time inference API
-- Batch prediction pipeline
-- Model monitoring and drift detection
-- Auto-scaling infrastructure
-- Multi-framework support (TensorFlow, PyTorch, ONNX)
+
+- Model loading and management
+- Prediction API
+- Model versioning
+- TensorFlow integration
+- RESTful API
 
 ## Tech Stack
-- Python + FastAPI
-- TensorFlow Serving
-- Kubernetes
-- Prometheus + Grafana
+
+- **Backend**: Python, Flask
+- **ML**: TensorFlow
+- **API**: RESTful
+
+## Project Structure
+
+\`\`\`
+ml-model-server/
+├── src/
+│   ├── services/        # Model service
+│   ├── api/             # API routes
+│   └── app.py           # Flask app
+└── requirements.txt
+\`\`\`
+
+## Installation
+
+\`\`\`bash
+pip install -r requirements.txt
+\`\`\`
+
+## Usage
+
+\`\`\`bash
+python src/app.py
+\`\`\`
+
+## API Endpoints
+
+- \`POST /api/models/:name/predict\` - Make prediction
+- \`GET /api/models/:name/info\` - Get model info
 
 ---
 
-**POWERED BY L8AB SYSTEMS** ⚡
+**POWERED BY L8AB SYSTEMS**
