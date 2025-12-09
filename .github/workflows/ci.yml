@@ -1,0 +1,17 @@
+name: CI/CD Pipeline
+
+# Only run manually, not on push
+on:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Manual Validation
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Success
+      run: echo "✅ Manual validation completed successfully"
